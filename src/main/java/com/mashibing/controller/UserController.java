@@ -11,13 +11,21 @@ public class UserController {
 
     Object o1 = null;
     Object o2 = null;
+    Model m1 = null;
 
     @RequestMapping("/update")
-    public String update(@ModelAttribute("user") User user){
+    public String update(@ModelAttribute("user") User user,Model model){
         System.out.println("update-----------");
         o2 = user;
         System.out.println(user);
         System.out.println(o1 == o2);
+        System.out.println(m1 == model);
+        return "seccess";
+    }
+
+    @RequestMapping("/update2")
+    public String update2(){
+        System.out.println("update2---------");
         return "seccess";
     }
 
@@ -31,5 +39,11 @@ public class UserController {
         user.setPassword("123456");
         model.addAttribute("user",user);
         o1 = user;
+        m1 = model;
+    }
+
+    @ModelAttribute
+    public void testModelAttribute2(Model model){
+        System.out.println("testModelAttribute2-----------");
     }
 }
