@@ -17,4 +17,5 @@
         <property name="suffix" value=".jsp"></property>
         <property name="prefix" value="/WEB-INF/page/"></property>
     </bean>
+    <bean class="com.mashibing.view.MyViewResolver"></bean>
 </beans>
