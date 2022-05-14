@@ -6,6 +6,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
+/**
+ * sessionAttributes要注意，再使用的时候如果没有对应的值，可能会报异常
+ */
 @Controller
 public class UserController {
 
