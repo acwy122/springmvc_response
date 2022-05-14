@@ -1,10 +1,16 @@
 package com.mashibing.bean;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
+
 public class User {
     private Integer id;
     private String name;
     private String password;
     private Integer age;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date birth;
 
     public User() {
     }
@@ -32,6 +38,14 @@ public class User {
         this.name = name;
     }
 
+    public Date getBirth() {
+        return birth;
+    }
+
+    public void setBirth(Date birth) {
+        this.birth = birth;
+    }
+
     public String getPassword() {
         return password;
     }
@@ -48,6 +62,14 @@ public class User {
         this.age = age;
     }
 
+    public User(Integer id, String name, String password, Integer age, Date birth) {
+        this.id = id;
+        this.name = name;
+        this.password = password;
+        this.age = age;
+        this.birth = birth;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -55,6 +77,7 @@ public class User {
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
                 ", age=" + age +
+                ", birth=" + birth +
                 '}';
     }
 }
