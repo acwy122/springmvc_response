@@ -24,4 +24,8 @@
         <property name="defaultEncoding" value="utf-8"></property>
         <property name="maxInMemorySize" value="1024000"></property>
     </bean>
+
+    <mvc:interceptors>
+        <bean class="com.mashibing.interceptor.MyInterceptor"></bean>
+    </mvc:interceptors>
 </beans>
