@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * 执行顺序：
  * preHandle  --》目标方法   --》postHandle --》先页面跳转  --》afterCompletion
- *
+ * 如果执行过程中出现异常，那么afterCompletion依然会继续执行
  *
  * 拦截器
  */
