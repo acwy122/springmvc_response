@@ -18,4 +18,10 @@
         <property name="prefix" value="/WEB-INF/page/"></property>
     </bean>
     <bean class="com.mashibing.view.MyViewResolver"></bean>
+
+    <!--文件上传-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="utf-8"></property>
+        <property name="maxInMemorySize" value="1024000"></property>
+    </bean>
 </beans>
