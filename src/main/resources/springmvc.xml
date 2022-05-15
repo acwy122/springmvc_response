@@ -27,5 +27,6 @@
 
     <mvc:interceptors>
         <bean class="com.mashibing.interceptor.MyInterceptor"></bean>
+        <bean class="com.mashibing.interceptor.SecondInterceptor"></bean>
     </mvc:interceptors>
 </beans>
